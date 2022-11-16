@@ -1,0 +1,63 @@
+{
+  "author": {
+    "name": "Sachin S",
+    "email": "sachin.s@impelsys.com"
+  },
+  "description": "Care Plan SDK",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/gulp": "^4.0.5",
+    "@types/minimist": "^1.2.0",
+    "@types/mocha": "^5.2.2",
+    "@types/node": "^10.17.60",
+    "chai": "^4.1.2",
+    "codecov": "^3.0.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1",
+    "minimist": "^1.2.0",
+    "pre-commit": "^1.2.2",
+    "semantic-release": "^19.0.3",
+    "ts-node": "^8.3.0",
+    "turbo-gulp": "^0.20.1"
+  },
+  "license": "MIT",
+  "main": "dist/lib/index",
+  "name": "careplan",
+  "nyc": {
+    "include": [
+      "build/test/lib/**/*.js",
+      "build/test/lib/**/*.mjs"
+    ],
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "extension": [
+      ".mjs"
+    ]
+  },
+  "scripts": {
+    "lint": "gulp :lint:fix",
+    "prepare": "gulp all:tsconfig.json && gulp dist",
+    "pretest": "gulp lib:build",
+    "test": "gulp test",
+    "commit": "git-cz",
+    "acp": "git add . && npm run commit && git push",
+    "semantic-release": "semantic-release --branches main"
+  },
+  "types": "dist/lib/index.d.ts",
+  "version": "0.0.0-development",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarePlanSDK/careplan.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
