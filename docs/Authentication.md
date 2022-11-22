@@ -1,0 +1,5 @@
+Authentication
+
+Functions
+- GenerateToken
+- RefreshToken
