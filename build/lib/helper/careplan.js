@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const CarePlan = {
+    LIST_CAREPLAN: "/careplans",
+    ENROLLMENTS: "/enrollments",
+    GET_PARTICIPANTS_ENROLLMENTS: "/participants"
+};
+exports.default = CarePlan;
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9saWIvaGVscGVyL2NhcmVwbGFuLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsTUFBTSxRQUFRLEdBQUc7SUFDYixhQUFhLEVBQUUsWUFBWTtJQUMzQixXQUFXLEVBQUMsY0FBYztJQUMxQiw0QkFBNEIsRUFBQyxlQUFlO0NBQy9DLENBQUM7QUFFRixrQkFBZSxRQUFRLENBQUMiLCJmaWxlIjoiaGVscGVyL2NhcmVwbGFuLmpzIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgQ2FyZVBsYW4gPSB7XHJcbiAgICBMSVNUX0NBUkVQTEFOOiBcIi9jYXJlcGxhbnNcIixcclxuICAgIEVOUk9MTE1FTlRTOlwiL2Vucm9sbG1lbnRzXCIsXHJcbiAgICBHRVRfUEFSVElDSVBBTlRTX0VOUk9MTE1FTlRTOlwiL3BhcnRpY2lwYW50c1wiXHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBDYXJlUGxhbjsiXSwic291cmNlUm9vdCI6IiJ9
