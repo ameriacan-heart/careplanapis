@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "main": "dist/lib/index",
-  "name": "careplan",
+  "name": "careplan-sdk",
   "nyc": {
     "include": [
       "build/test/lib/**/*.js",
