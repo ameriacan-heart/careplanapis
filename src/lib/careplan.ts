@@ -3,7 +3,7 @@ import CarePlan from "./helper/careplan";
 import { Params } from "./types";
 
 /**
- * @desc Send Base url , token and params to get list careplans.
+ * @desc Send Base url , token and params to get list careplans..
  * @param  {string} baseurl
  * @param  {string} token
  * @param  {Params} params
