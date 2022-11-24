@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x]
         os: [ubuntu-latest]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
@@ -26,7 +26,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
+    - run: npm install
     - run: npm test
   publish:
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
+    - run: npm install
     - run: npm run semantic-release
       env: 
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
