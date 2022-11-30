@@ -44,7 +44,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run semantic-release
-    if: ${{ github.ref == 'refs/heads/development' }}
+    else: 
     needs: [quality]
     steps: 
     - uses: actions/checkout@v3
