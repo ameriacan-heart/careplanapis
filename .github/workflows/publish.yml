@@ -45,7 +45,6 @@ jobs:
     - run: npm install
     - run: npm run semantic-release
     if: ${{ github.ref == 'refs/heads/development' }}
-    - run: sed -i 's|american-heart/careplans|american-heart/dev/careplans|g' package.json
     needs: [quality]
     steps: 
     - uses: actions/checkout@v3
@@ -53,6 +52,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+    - run: sed -i 's|american-heart/careplans|american-heart/dev/careplans|g' package.json
     - run: npm install
     - run: npm run semantic-release
 	
