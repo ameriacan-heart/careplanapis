@@ -1,0 +1,11 @@
+name: Release
+
+blocks:
+  - name: Release
+    secrets:
+      - name: semantic-release-credentials
+    jobs:
+      - name: Release
+        commands:
+          - checkout
+          - sem-semantic-release
