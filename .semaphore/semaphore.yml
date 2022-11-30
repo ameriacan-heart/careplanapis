@@ -1,0 +1,14 @@
+name: Build & Test
+blocks:
+  - name: Test
+    jobs:
+      - name: Tests
+        commands:
+          - checkout
+          - make test
+
+promotions:
+  - name: Automatic SemVer Release
+    pipeline: release.yaml
+    auto_promote:
+      when: "branch = 'development' or branch =~ 'main'"
