@@ -8,8 +8,8 @@
 
 ## Careplan
 
-The CarePlans platform describes the intentions of how one or more practitioners plan to deliver care to a specific patient..
-Care plans are used in a variety of areas and scopes ranging from the encounter or visit specifically to cross-visits..
+The CarePlans platform describes the intentions of how one or more practitioners plan to deliver care to a specific patient.
+Care plans are used in a variety of areas and scopes ranging from the encounter or visit specifically to cross-visits.
 
 ## Installing
 
