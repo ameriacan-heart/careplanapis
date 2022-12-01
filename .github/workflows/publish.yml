@@ -44,7 +44,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run semantic-release
-	  if: ${{ github.ref == 'refs/heads/development' }}
+  publish-dev:  
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/development' }}
     needs: [quality]
     steps: 
     - uses: actions/checkout@v3
@@ -52,10 +54,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: sed -i 's|american-heart/careplans|american-heart/dev/careplans|g' package.json
+    - run: sed -i 's|semantic-release --branches main|semantic-release --branches development|g' package.json
+    - run: sed -i 's|american-heart/careplans|american-heart/dev|g' package.json
     - run: npm install
     - run: npm run semantic-release
       env: 
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+  
