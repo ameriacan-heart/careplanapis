@@ -55,7 +55,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: sed -i 's|semantic-release --branches main|semantic-release --branches development|g' package.json
-    - run: sed -i 's|american-heart/careplans|american-heart/dev/careplans|g' package.json
+    - run: sed -i 's|american-heart/careplans|american-heart/dev|g' package.json
     - run: npm install
     - run: npm run semantic-release
       env: 
