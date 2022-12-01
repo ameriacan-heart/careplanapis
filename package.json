@@ -44,10 +44,8 @@
     "test": "gulp test",
     "commit": "git-cz",
     "acp": "git add . && npm run commit && git push",
-    "semantic-release": [
-	   "semantic-release --branches main",
-	   "semantic-release --branches development"
-	],
+    "semantic-release": "semantic-release --branches main"
+  },
   "types": "dist/lib/index.d.ts",
   "version": "0.0.0-development",
   "dependencies": {
